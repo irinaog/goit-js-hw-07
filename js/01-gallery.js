@@ -33,10 +33,9 @@ function onItemContainerClick(evt) {
 };
 
 function onOpenModal(image) {
-    const largeImage = image.target.src;
-    image.target.src = image.target.dataset.source;
-    const instance = basicLightbox.create(`<img src="${largeImage}" alt = "${image.target.alt}"></img>`);
+    const instance = basicLightbox.create(`<img src="${image.target.dataset.source}" alt = "${image.target.alt}"></img>`);
     instance.show();
+    return;
 }
 
 
