@@ -35,7 +35,14 @@ function onItemContainerClick(evt) {
 function onOpenModal(image) {
     const instance = basicLightbox.create(`<img src="${image.target.dataset.source}" alt = "${image.target.alt}"></img>`);
     instance.show();
+    window.addEventListener('keydown', (event) => {
+        if (event.code === "Escape") {
+        instance.close();
+    }    
+    })
     return;
-}
+};
+
+
 
 
